@@ -1,5 +1,6 @@
 package com.someapp.vishnu.myhigherorlower;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,8 +49,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Lower!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Correct!" + " it was " +
-                            randomNumber.toString() + "."
+                            randomNumber.toString() + "." + " Play again!"
                         , Toast.LENGTH_SHORT).show();
+            Random rand = new Random(); // Random object to call nextInt()
+            randomNumber = rand.nextInt(20) + 1; // Put + 1 next to it for the minimum
         }
 
 
